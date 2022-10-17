@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./quiz.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ</title>
+  </head>
+  <body>
+   <div id="top"> 
+    <img src="/assets/epicode_logo.png">
+    <div>timer</div>
+  </div>
+  <div id="mainSpace">
+    <div class="container">
+      <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer" class="buttons">
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button">4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start" class="startButton">Start</button>
+        <button id="next" class="nextButton">Next</button>
+      </div>
+      <div class="points">
+        <label for="urScore">Your Score:</label>
+        <input id="scoreboard" type="number" name="urScore" disabled></input>
+      </div>
+    </div></div>
+    <div id="bottomtext">QUESTION 1<span id="btm">/10</span></div>
+
+    <script src="./quiz.js"></script>
+  </body>
+</html>
