@@ -25,16 +25,35 @@
           </div>
           <div class="container_middle">
             <div class="progress-bar">
-              <div class="outer">
+              <div>
+                <svg
+                  class="bottom-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  width="220px"
+                  height="220px"
+                >
+                  <defs>
+                    <linearGradient id="GradientColor">
+                      <stop offset="0%" stop-color="#e91e63" />
+                      <stop offset="100%" stop-color="#673ab7" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="110" cy="110" r="95" stroke-linecap="unset" />
+                </svg>
+              </div>
+
+              <!-- <div class="outer">
                 <div class="inner">
                   <div id="progress-text">Congratulations!</div>
                 </div>
-              </div>
+              </div> -->
               <svg
+                class="top-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
-                width="160px"
-                height="160px"
+                width="220px"
+                height="220px"
               >
                 <defs>
                   <linearGradient id="GradientColor">
@@ -42,16 +61,9 @@
                     <stop offset="100%" stop-color="#673ab7" />
                   </linearGradient>
                 </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                <circle cx="110" cy="110" r="95" stroke-linecap="unset" />
               </svg>
-            </div>
-            <div id="result-text">
-              <!-- <div>Congratulations!</div> -->
-              <!-- <div>You passed the exam</div>
-              <div class="grey-text">
-                We'll send you the certificate in few minutes. Check your email
-                (including promotions/ spam folder)
-              </div> -->
+              <div id="result-text">Congratulations!</div>
             </div>
           </div>
           <div class="container_right">

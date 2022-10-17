@@ -42,4 +42,13 @@ export const questions = [
     optionD: "Function declaration",
     answer: "B",
   },
+  {
+    prompt:
+      "Which of the following methods is used to access HTML elements using Javascript?",
+    optionA: "getElementbyId()",
+    optionB: "getElementsByClassName()",
+    optionC: "Both A and B",
+    optionD: "None of above",
+    answer: "C",
+  },
 ];

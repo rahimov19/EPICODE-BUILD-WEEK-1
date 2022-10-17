@@ -57,23 +57,22 @@ body {
 .container_right {
   padding: 30px;
 }
-
-/* #result-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 11px;
-  line-height: 16px;
-} */
-
 .progress-bar {
   width: 220px;
   height: 220px;
   position: relative;
 }
 
-.outer {
+#result-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+/* .outer {
   height: 220px;
   width: 220px;
   border-radius: 50%;
@@ -86,24 +85,31 @@ body {
   width: 160px;
   border-radius: 50%;
   border: 1px solid transparent;
+
   margin: auto;
   margin-top: 30px;
   box-shadow: inset 8px 8px 15px 5px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+
+.bottom-svg {
+  fill: none;
+  stroke: #c2128d;
+  stroke-width: 30px;
 }
 
-circle {
+.top-svg circle {
   fill: none;
-  stroke: cornflowerblue;
+  stroke: #00ffff;
   stroke-width: 30px;
   /* percent: */
-  stroke-dasharray: 350;
+  stroke-dasharray: 500;
   /* for animate the circle we use dashoffset */
   stroke-dashoffset: 0;
 }
-svg {
+.top-svg {
   position: absolute;
   top: 0;
   left: 0;
