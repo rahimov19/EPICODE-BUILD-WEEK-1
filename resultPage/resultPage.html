@@ -4,18 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resultPage.css" />
     <title>Result Page</title>
   </head>
   <body>
     <div class="result_page">
-      <div class="logo"></div>
-      <div class="result_heading"></div>
-      <div class="result_container">
-        <div class="container_left"></div>
-        <div class="container_middle"></div>
-        <div class="container_right"></div>
+      <div class="logo">
+        <img src="../assets/epicode_logo.png" alt="Epicode Logo" />
       </div>
-      <div id="rateUs_btn"></div>
+      <div class="result_page-content">
+        <div class="result_heading">
+          <h1 class="heading">Results</h1>
+          <div>The summary of your answers</div>
+        </div>
+        <div class="result_container">
+          <div class="container_left">
+            <div class="correct-text heading">Correct</div>
+            <div class="heading" id="correct-percentage">66.7%</div>
+            <div id="correct-questions">4/6 questions</div>
+          </div>
+          <div class="container_middle">
+            <div id="progress-bar">(progress bar)</div>
+            <div id="result-text">Congratulations!</div>
+          </div>
+          <div class="container_right">
+            <div class="wrong-text heading">Wrong</div>
+            <div class="heading" id="wrong-percentage">33.3%</div>
+            <div id="wrong-questions">2/6 questions</div>
+          </div>
+        </div>
+        <button id="rateUs_btn">RATE US</button>
+      </div>
     </div>
   </body>
 </html>
