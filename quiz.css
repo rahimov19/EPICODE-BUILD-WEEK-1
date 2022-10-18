@@ -185,5 +185,23 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 45px;
+}
+#timertext {
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  bottom: 3.6em;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+#remaining {
+  bottom: 0px;
+  position: absolute;
+  right: 40px;
+}
+#seconds {
+  bottom: 60px;
+  position: absolute;
+  right: 47px;
 }

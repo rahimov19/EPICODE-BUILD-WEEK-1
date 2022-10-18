@@ -133,6 +133,8 @@ startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
+  restartTimer();
+  startTimer();
 });
 
 function startGame() {
@@ -140,6 +142,7 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove("hide");
+  startTimer();
   setNextQuestion();
 }
 
@@ -147,7 +150,6 @@ function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
-
 function showQuestion(question) {
   questionElement.innerText = question.question;
   question.answers.forEach((answer) => {
@@ -204,6 +206,8 @@ function clearStatusClass(element) {
   element.classList.remove("wrong");
 }
 
+/*--------TIMER-----------*/
+
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -222,7 +226,7 @@ const COLOR_CODES = {
   },
 };
 
-const TIME_LIMIT = 30;
+let TIME_LIMIT = 5;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -246,16 +250,27 @@ document.getElementById("app").innerHTML = `
       ></path>
     </g>
   </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
+  <span id="base-timer-label" class="base-timer__label"> ${formatTime(
     timeLeft
-  )}</span>
+  )}</span><div id="timertext"><span id="seconds">SECONDS</span>
+  <span id="remaining">REMAINING</span></div>
 </div>
 `;
 
-startTimer();
+// startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
+
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.click();
+  } else {
+    startButton.innerText = "Restart";
+    startButton.classList.remove("hide");
+    let score = scoreBoard.value;
+    alert("Congratulations. Your score is " + score);
+    scoreBoard.value = 0;
+  }
 }
 
 function startTimer() {
@@ -273,6 +288,14 @@ function startTimer() {
   }, 1000);
 }
 
+function restartTimer() {
+  TIME_LIMIT = 5;
+  timePassed = 0;
+  timeLeft = TIME_LIMIT;
+  timerInterval = null;
+  onTimesUp();
+}
+
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
   let seconds = time % 60;
@@ -281,7 +304,8 @@ function formatTime(time) {
     seconds = `0${seconds}`;
   }
 
-  return `${minutes}:${seconds}`;
+  // return `${minutes}:${seconds}`;
+  return `${seconds}`;
 }
 
 function setRemainingPathColor(timeLeft) {
