@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reviewPage.css" />
+    <title>Review Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <img id="logo" src="./epicode_logo.png" alt="logo" />
+    </div>
+    <h1>Tell us how it`s going</h1>
+    <p>
+      From 0 to 10, how likeky are you to recommend EPICODE to a freind or a
+      colleague ?
+    </p>
+    <div id="status"></div>
+    <form id="ratingForm">
+      <fieldset class="rating">
+        <input type="radio" id="star1" name="rating" value="1" /><label
+          for="star1"
+          title="Rocks!"
+          >1 stars</label
+        >
+        <input type="radio" id="star2" name="rating" value="2" /><label
+          for="star2"
+          title="Pretty good"
+          >2 stars</label
+        >
+        <input type="radio" id="star3" name="rating" value="3" /><label
+          for="star3"
+          title="Meh"
+          >3 stars</label
+        >
+        <input type="radio" id="star4" name="rating" value="4" /><label
+          for="star4"
+          title="Kinda bad"
+          >4 stars</label
+        >
+        <input type="radio" id="star5" name="rating" value="5" /><label
+          for="star5"
+          title="very good"
+          >5 star</label
+        >
+        <input type="radio" id="star6" name="rating" value="6" /><label
+          for="star6"
+          title="good"
+          >6 star</label
+        >
+        <input type="radio" id="star7" name="rating" value="7" /><label
+          for="star7"
+          title="anyhow"
+          >7 star</label
+        >
+        <input type="radio" id="star8" name="rating" value="8" /><label
+          for="star8"
+          title="enough"
+          >8 star</label
+        >
+        <input type="radio" id="star9" name="rating" value="9" /><label
+          for="star9"
+          title="not enough"
+          >9 star</label
+        >
+        <input type="radio" id="star10" name="rating" value="10" /><label
+          for="star10"
+          title="bad"
+          >10 star</label
+        >
+      </fieldset>
+      <div class="clearfix"></div>
+    </form>
+
+    <p>Leave us an open feedback about your experiece so far</p>
+    <input id="text" type="text" placeholder="Write your comment here" />
+
+    <hr size="4" width="40%" color="purple" />
+    <button type="submit" onclick="window.location.href='https://epicode.com';">
+      More info
+    </button>
+
+    <script src="./reviewPage.js"></script>
+  </body>
+</html>
