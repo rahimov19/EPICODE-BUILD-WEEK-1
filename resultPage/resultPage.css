@@ -101,7 +101,8 @@ body {
   stroke: #00ffff;
   stroke-width: 30px;
   /* percent: */
-  stroke-dasharray: 500;
+  /*691 for full circle*/
+  stroke-dasharray: 462;
   /* for animate the circle we use dashoffset */
   stroke-dashoffset: 0;
 }
