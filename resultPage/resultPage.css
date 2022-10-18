@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+body {
+  margin: 0;
+  padding: 40px 80px;
+  background-image: url(../assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.result_page {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 30px 60px;
+  color: #fafbfd;
+}
+
+.result_page-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo img {
+  width: 130px;
+}
+
+.result_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.result_heading h1 {
+  margin: 0;
+  color: #e6e6e6;
+  font-size: 35px;
+}
+
+.result_heading div {
+  font-size: 17px;
+  color: #cac8c8;
+}
+
+.result_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.3rem;
+}
+
+.container_left,
+.container_middle,
+.container_right {
+  padding: 35px;
+}
+
+.progress-bar {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.progress-bar-text {
+  position: absolute;
+  top: 75px;
+  margin: 0px 60px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.progress-bar-h1 {
+  font-size: 12px;
+  margin: 0;
+  color: #e6e6e6;
+}
+
+.progress-bar-h2 {
+  margin: 6px 0px 18px 0px;
+  font-size: 12px;
+  color: #00ffff;
+}
+
+.progress-bar-p {
+  color: #cac8c8;
+  font-size: 9px;
+}
+
+.bottom-svg {
+  fill: none;
+  stroke: #c2128d;
+  stroke-width: 30px;
+}
+
+.top-svg circle {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 30px;
+  /* percent: */
+  stroke-dasharray: 500;
+  /* for animate the circle we use dashoffset */
+  stroke-dashoffset: 0;
+}
+
+.top-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.correct-questions {
+  font-size: 12px;
+  color: #e6e6e6;
+}
+
+.wrong-questions {
+  font-size: 12px;
+  color: #cac8c8;
+}
+
+.correct-text,
+.wrong-text {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.container_right {
+  color: #d8d8d8;
+  text-align: right;
+}
+
+.correct-percentage,
+.wrong-percentage {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.rateUs_btn {
+  border: 2px solid #d8d8d8;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 13px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  color: #e6e6e6;
+}

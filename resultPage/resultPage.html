@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resultPage.css" />
+    <title>Result Page</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="../assets/epicode_logo.png" alt="Epicode Logo" />
+    </div>
+    <div class="result_page">
+      <div class="result_page-content">
+        <div class="result_heading">
+          <h1>Results</h1>
+          <div>The summary of your answers:</div>
+        </div>
+        <div class="result_container">
+          <div class="container_left">
+            <div class="correct-text">Correct</div>
+            <div class="correct-percentage">67%</div>
+            <div class="correct-questions">4/6 questions</div>
+          </div>
+          <div class="container_middle">
+            <div class="progress-bar">
+              <div>
+                <svg
+                  class="bottom-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  width="250px"
+                  height="250px"
+                >
+                  <defs>
+                    <linearGradient id="GradientColor">
+                      <stop offset="0%" stop-color="#e91e63" />
+                      <stop offset="100%" stop-color="#673ab7" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="125" cy="125" r="110" stroke-linecap="unset" />
+                </svg>
+              </div>
+              <svg
+                class="top-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="250px"
+                height="250px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle cx="125" cy="125" r="110" stroke-linecap="unset" />
+              </svg>
+              <div class="progress-bar-text">
+                <h1 class="progress-bar-h1">Congratulations!</h1>
+                <h2 class="progress-bar-h2">You Passed The Exam</h2>
+                <p class="progress-bar-p">
+                  We'll send you the certificate in few minutes. <br />
+                  Check your email (including promotions /spam folder)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container_right">
+            <div class="wrong-text">Wrong</div>
+            <div class="wrong-percentage">33%</div>
+            <div class="wrong-questions">2/6 questions</div>
+          </div>
+        </div>
+        <button class="rateUs_btn">RATE US</button>
+      </div>
+    </div>
+  </body>
+</html>
