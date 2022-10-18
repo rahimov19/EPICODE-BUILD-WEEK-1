@@ -14,7 +14,6 @@ svg {
 }
 
 .rating {
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -85,6 +84,7 @@ button {
   transition-duration: 1s;
   opacity: 1;
   cursor: pointer;
+  box-shadow: 0 0 35px 15px #02a5a5;
 }
 
 .rating {
@@ -115,14 +115,15 @@ button {
 }
 
 .rating > input:checked ~ label {
-  color: #f70;
-  text-shadow: 1px 1px #c60, 2px 2px #940, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+  color: #00ffff;
+  text-shadow: 1px 1px #00ffff, 2px 2px #00ffff,
+    0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-  color: gold;
-  text-shadow: 1px 1px goldenrod, 2px 2px #b57340,
+  color: #00ffff;
+  text-shadow: 1px 1px #00ffff, 2px 2px #00ffff,
     0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
 
@@ -131,8 +132,8 @@ button {
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-  color: #ea0;
-  text-shadow: 1px 1px goldenrod, 2px 2px #b57340,
+  color: #00ffff;
+  text-shadow: 1px 1px #00ffff, 2px 2px #00ffff,
     0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
 
