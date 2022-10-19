@@ -8,7 +8,7 @@
     <title>Review Page</title>
   </head>
   <body>
-    <img id="logo" src="./epicode_logo.png" alt="logo" />
+    <img id="logo" src="assets/epicode_logo.png" alt="logo" />
     <div class="container">
       <h1>Tell us how it`s going</h1>
       <p>
@@ -72,14 +72,20 @@
         <div class="clearfix"></div>
       </form>
 
-      <p>Leave us an open feedback about your experiece so far</p>
-      <input id="text" type="text" placeholder="Write your comment here" />
+      <p id="btmtext">Leave us an open feedback about your experiece so far</p>
+      <input id="text" type="text" placeholder="  Write your comment here" />
 
-      <hr size="4" width="40%" color="purple" />
+      <!-- <hr size="4" width="40%" color="purple" /> -->
     </div>
-    <button type="submit" onclick="window.location.href='https://epicode.com';">
-      More info
-    </button>
+    <div id="button">
+      <button
+        id="moreinfo"
+        type="submit"
+        onclick="window.location.href='https://epicode.com';"
+      >
+        MORE INFO
+      </button>
+    </div>
 
     <script src="./review.js"></script>
   </body>
