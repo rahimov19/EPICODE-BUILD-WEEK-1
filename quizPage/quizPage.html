@@ -8,32 +8,36 @@
     <title>QUIZ</title>
   </head>
   <body>
-   <div id="top"> 
-    <img src="../assets/epicode_logo.png">
-    <div id="app"></div>
-  </div>
-  <div id="mainSpace">
-    <div class="container">
-      <div id="question-container" class="hide">
-        <div id="question">Question</div>
-        <div id="answer" class="buttons">
-          <button class="button">1</button>
-          <button class="button">2</button>
-          <button class="button">3</button>
-          <button class="button">4</button>
+    <div id="top"> 
+      <img src="../assets/epicode_logo.png">
+      <div id="app" class="hide"></div>
+    </div>
+    
+    <div id="mainSpace">
+      <div class="container">
+        <div id="question-container" class="hide">
+          <div id="question">Question</div>
+          <div id="answer" class="buttons">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">4</button>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="start" class="startButton">Start The Quiz</button>
+          <button id="next" class="nextButton hide">Next ></button>
+        </div>
+        <div class="points">
+          <label for="urScore">Your Score:</label>
+          <input id="scoreboard" type="number" name="urScore" disabled></input>
         </div>
       </div>
-      <div class="controls">
-        <button id="start" class="startButton">Start</button>
-        <button id="next" class="nextButton">Next</button>
+    </div>
+      <div id="bottomtext" class="hide">
+        QUESTION <span id="questionNum"></span><span id="btm">/10</span>
       </div>
-      <div class="points">
-        <label for="urScore">Your Score:</label>
-        <input id="scoreboard" type="number" name="urScore" disabled></input>
-      </div>
-    </div></div>
-    <div id="bottomtext">QUESTION 1<span id="btm">/10</span></div>
 
-    <script src="./quizPage.js"></script>
+      <script src="./quizPage.js"></script>
   </body>
 </html>

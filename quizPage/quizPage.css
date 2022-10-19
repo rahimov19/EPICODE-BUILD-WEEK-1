@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;900&family=Outfit:wght@400;900&display=swap");
-html {
-  width: 100%;
-}
+
 body {
   --hue: var(--hue-neutral);
   background-image: url(../assets/bg.jpg);
@@ -17,8 +15,9 @@ body {
   font-size: 1.25em;
   /* margin-inline: 4em;
   margin-top: 3em; */
-  margin-block: 1.6em;
-  margin-inline: 8em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #top {
   display: flex;
@@ -28,6 +27,7 @@ body {
 }
 #mainSpace {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 75%;
@@ -36,24 +36,20 @@ body {
 /* div { */
 /* border: 1px solid black; */
 /* } */
-button {
-  margin-top: 10px;
-}
+
 img {
   height: 32px;
 }
 
 .container {
-  width: 80%;
-  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   /* background-color: white; */
   border-radius: 5px;
   padding: 10px;
-  height: 60%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .points {
   display: none;
@@ -63,10 +59,10 @@ img {
   grid-template-columns: repeat(2, auto);
   gap: 30px;
   margin: 20px 0;
-  transform: translateX(4%);
 }
+
 .button {
-  color: blueviolet;
+  /* color: blueviolet;
   box-shadow: 1px -4px 0px -3px white;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 30px 30px;
@@ -75,11 +71,24 @@ img {
   color: white;
   font-size: 1em;
   outline: none;
-  width: 80%;
+  width: 80%; */
+
+  padding: 10px 120px;
+  box-shadow: -1.9px -5px 1px -3px white;
+  text-align: center;
+  border-radius: 40px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .button:hover {
-  border-color: black;
+  background: #c80090;
 }
 
 .button.correct {
@@ -93,16 +102,23 @@ img {
 
 .startButton,
 .nextButton {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  width: 6em;
+  /* font-size: 1.5rem;
+  padding: 10px 120px;
+  text-align: center;
   border-radius: 30px 30px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: white; */
+
+  text-align: center;
+  padding: 20px 50px;
+  background-color: #50a1bd;
+  border: none;
+  font-weight: 600;
+  color: #120a27;
 }
 
 .controls {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

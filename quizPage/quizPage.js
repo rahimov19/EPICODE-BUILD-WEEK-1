@@ -101,9 +101,9 @@ const questions = [
     difficulty: "easy",
     question: "Question 9",
     answers: [
-      { text: "Answer 1", correct: true },
+      { text: "Answer 1", correct: false },
       { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
+      { text: "Answer 3", correct: true },
       { text: "Answer 4", correct: false },
     ],
   },
@@ -127,31 +127,50 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer");
 const scoreBoard = document.getElementById("scoreboard");
+const questionNumElement = document.getElementById("questionNum");
+const controlsElement = document.getElementsByClassName("controls");
+const bottomTextElement = document.getElementById("bottomtext");
+const timerElement = document.getElementById("app");
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
-  restartTimer();
-  startTimer();
+  // restartTimer();
+  // startTimer();
 });
 
 function startGame() {
   startButton.classList.add("hide");
+  bottomTextElement.classList.remove("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove("hide");
-  startTimer();
+  nextButton.classList.remove("hide");
+  timerElement.classList.remove("hide");
+  //TODO: MAKE "JUSTIFY CONTENT:RIGHT" FOR CONTROLS CLASS
+
+  // startTimer();
   setNextQuestion();
 }
 
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
+  showQuestionNum();
 }
+
+//for the showing the number of question inside the #bottomtext:
+let questionNum = 0;
+const showQuestionNum = function () {
+  questionNum++;
+  questionNumElement.innerText = questionNum;
+};
+
 function showQuestion(question) {
   questionElement.innerText = question.question;
+
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = answer.text;
@@ -163,8 +182,9 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button);
   });
 }
+
 function resetState() {
-  nextButton.classList.add("hide");
+  // nextButton.classList.add("hide");
   clearStatusClass(document.body);
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
