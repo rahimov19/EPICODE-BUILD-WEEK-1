@@ -1,122 +1,95 @@
 const questions = [
   {
-    category: "Science: Computers",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Question 1",
+    question: "What does HTML stand for?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "Hyper Text Markup Language", correct: true },
+      { text: "Home Tool Markup Language", correct: false },
+      { text: "Hyperlinks and Text Markup Language", correct: false },
+      { text: "Hybrid Text Metaphoring Language", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Question 2",
+    question: "Choose the correct HTML element for the largest heading:",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "<span>", correct: false },
+      { text: "<head>", correct: false },
+      { text: "<h1>", correct: true },
+      { text: "<heading>", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "boolean",
-    difficulty: "easy",
-    question: "Question 3",
+    question: "What is the correct HTML for adding a background color?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "<body style= yellow>", correct: false },
+      { text: "<body style= background-color:yellow", correct: true },
+      { text: "<body bg = yellow>", correct: false },
+      { text: "<background>yellow</background>", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "boolean",
-    difficulty: "easy",
-    question: "Question 4",
+    question: "Which character is used to indicate an end tag?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "/", correct: true },
+      { text: "*", correct: false },
+      { text: "-", correct: false },
+      { text: "<", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Question 5",
+    question: "ID and Classes can have same name.",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "False", correct: false },
+      { text: "True", correct: true },
+      // { text: "Answer 3", correct: false },
+      // { text: "Answer 4", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Question 6",
+    question:
+      "Inline elements are normally displayed without starting a new line.",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+      // { text: "Answer 3", correct: false },
+      // { text: "Answer 4", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Question 7",
+    question: "Which HTML element defines the title of a document?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "<meta>", correct: false },
+      { text: "<head>", correct: false },
+      { text: "<title>", correct: true },
+      { text: "<h1>", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Question 8",
+    question: "In HTML, onblur and onfocus are:",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "Event attributes", correct: true },
+      { text: "Style attributes", correct: false },
+      { text: "HTML element", correct: false },
+      { text: "Button values", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "boolean",
-    difficulty: "easy",
-    question: "Question 9",
+    question:
+      "In HTML, which attribute is used to specify that an input field must be filled out?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "validate", correct: false },
+      { text: "required", correct: true },
+      { text: "formvalidate", correct: false },
+      { text: "placeholder", correct: false },
     ],
   },
   {
-    category: "Science: Computers",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Question 10",
+    question:
+      "Which HTML element is used to specify a header for a document or section?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "<header>", correct: true },
+      { text: "<top>", correct: false },
+      { text: "<section>", correct: false },
+      { text: "<head>", correct: false },
     ],
   },
 ];
@@ -130,11 +103,9 @@ const scoreBoard = document.getElementById("scoreboard");
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
+
 nextButton.addEventListener("click", () => {
-  currentQuestionIndex++;
   setNextQuestion();
-  restartTimer();
-  startTimer();
 });
 
 function startGame() {
@@ -142,13 +113,14 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove("hide");
-  startTimer();
   setNextQuestion();
 }
 
 function setNextQuestion() {
+  currentQuestionIndex++;
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
+  startTimer();
 }
 function showQuestion(question) {
   questionElement.innerText = question.question;
@@ -205,7 +177,6 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
-
 /*--------TIMER-----------*/
 
 const FULL_DASH_ARRAY = 283;
@@ -265,22 +236,30 @@ function onTimesUp() {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.click();
   } else {
-    startButton.innerText = "Restart";
+    startButton.innerText = "Finish";
     startButton.classList.remove("hide");
     let score = scoreBoard.value;
     alert("Congratulations. Your score is " + score);
     scoreBoard.value = 0;
   }
 }
+function animation() {
+  setInterval(() => {
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+  }, 10);
+}
 
 function startTimer() {
+  restartTimer();
+  animation();
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML =
       formatTime(timeLeft);
-    setCircleDasharray();
-    setRemainingPathColor(timeLeft);
+    // setCircleDasharray();
+    // setRemainingPathColor(timeLeft);
 
     if (timeLeft === 0) {
       onTimesUp();
@@ -289,11 +268,11 @@ function startTimer() {
 }
 
 function restartTimer() {
+  clearInterval(timerInterval);
   TIME_LIMIT = 5;
-  timePassed = 0;
+  timePassed = null;
   timeLeft = TIME_LIMIT;
   timerInterval = null;
-  onTimesUp();
 }
 
 function formatTime(time) {
