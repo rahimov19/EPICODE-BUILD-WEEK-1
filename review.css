@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Outfit:wght@400;900&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,600&family=Pacifico&family=Roboto:wght@100;300;400;500;700&display=swap");
 body {
   background: url(./bg.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -7,6 +7,9 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 svg {
@@ -24,7 +27,10 @@ svg {
   margin-bottom: auto;
   cursor: pointer;
   border: none;
-  left: 33em;
+  left: 16em;
+  font-size: 1.6em;
+  float: left;
+  top: 1.2em;
 }
 
 #logo {
@@ -53,6 +59,7 @@ p {
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
+  top: 1em;
 }
 
 #text {
@@ -64,6 +71,8 @@ p {
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
+  top: 7em;
+  left: 35em;
 }
 
 button {
@@ -84,11 +93,10 @@ button {
   transition-duration: 1s;
   opacity: 1;
   cursor: pointer;
-  box-shadow: 0 0 35px 15px #02a5a5;
 }
 
-.rating {
-  float: left;
+button:hover {
+  box-shadow: 0 0 35px 15px #02a5a5;
 }
 
 .rating:not(:checked) > input {
@@ -155,4 +163,8 @@ button {
 
 .clearfix {
   *zoom: 1;
+}
+
+hr {
+  margin-top: 6em;
 }
