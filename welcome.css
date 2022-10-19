@@ -11,6 +11,10 @@ body {
   background-size: cover;
   font-weight: 200;
 }
+
+a {
+  display: contents;
+}
 img {
   width: 140px;
   margin-bottom: 2em;
