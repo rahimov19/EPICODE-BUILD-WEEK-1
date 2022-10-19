@@ -3,72 +3,76 @@ const questions = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question: "Question 1",
+    question: "Which type of JavaScript language is ___",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "Object-Based", correct: true },
+      { text: "Object-Oriented", correct: false },
+      { text: "Assembly-language", correct: false },
+      { text: "High-level", correct: false },
     ],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question: "Question 2",
+    question: 'The "function" and " var" are known as:',
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "Declaration statements", correct: true },
+      { text: "Data types", correct: false },
+      { text: "Keywords", correct: false },
+      { text: "Prototypes", correct: false },
     ],
   },
   {
     category: "Science: Computers",
     type: "boolean",
     difficulty: "easy",
-    question: "Question 3",
+    question:
+      "Which one of the following is the correct way for calling the JavaScript code?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "Function/Method", correct: true },
+      { text: "RMI", correct: false },
+      { text: "Triggering Event", correct: false },
+      { text: "Preprocessor", correct: false },
     ],
   },
   {
     category: "Science: Computers",
     type: "boolean",
     difficulty: "easy",
-    question: "Question 4",
+    question:
+      "In the JavaScript, which one of the following is not considered as an error:",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "Division by zero", correct: true },
+      { text: "Missing of Bracket", correct: false },
+      { text: "Missing of semicolons", correct: false },
+      { text: "Syntax error", correct: false },
     ],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question: "Question 5",
+    question:
+      "In JavaScript, what will be used for calling the function definition expression:",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "Function literal", correct: true },
+      { text: "Function prototype", correct: false },
+      { text: "Function calling", correct: false },
+      { text: "Function declaration", correct: false },
     ],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question: "Question 6",
+    question:
+      "Which of the following methods is used to access HTML elements using Javascript?",
     answers: [
-      { text: "Answer 1", correct: true },
-      { text: "Answer 2", correct: false },
-      { text: "Answer 3", correct: false },
-      { text: "Answer 4", correct: false },
+      { text: "All of them", correct: true },
+      { text: "getElementbyId()", correct: false },
+      { text: "getElementsByClassName()", correct: false },
+      { text: "querySelector()", correct: false },
     ],
   },
   {
@@ -168,6 +172,10 @@ const showQuestionNum = function () {
   questionNumElement.innerText = questionNum;
 };
 
+let correctAnswers = 0;
+let wrongAnswers = 0;
+let emptyAnswers = 0;
+
 function showQuestion(question) {
   questionElement.innerText = question.question;
 
@@ -185,11 +193,13 @@ function showQuestion(question) {
 
 function resetState() {
   // nextButton.classList.add("hide");
+
   clearStatusClass(document.body);
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
+
 function selectAnswer(e) {
   let selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -206,10 +216,16 @@ function selectAnswer(e) {
     nextButton.classList.remove("hide");
   } else {
     startButton.innerText = "Restart";
+
+    //hiding #question-container and next button:
+    questionContainerElement.classList.add("hide");
+    nextButton.classList.add("hide");
+
     startButton.classList.remove("hide");
     let score = scoreBoard.value;
     alert("Congratulations. Your score is " + score);
     scoreBoard.value = 0;
+    questionNum = 0;
   }
 }
 function setStatusClass(element, correct) {
