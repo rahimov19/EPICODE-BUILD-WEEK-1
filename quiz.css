@@ -92,26 +92,63 @@ img {
 }
 
 .nextButton {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  width: 7em;
-  transform: translateX(14.5em);
-  /* border-radius: 30px 30px; */
-  background-color: rgba(1, 255, 255, 0.908);
-  color: rgba(12, 7, 50, 0.847);
+  width: 8em;
+  height: 3em;
+  font-size: 1.1em;
+  background-color: #00bebe;
+  border: 1px solid #00ffff;
+  font-family: "Outfit", sans-serif;
+  margin-left: 30em;
+  font-weight: 900;
+  color: #0c113b;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  margin-top: 1em;
+}
+.nextButton:hover {
+  box-shadow: 0 0 35px 15px #02a5a5;
+  background-color: #00ffff;
 }
 .startButton {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  width: 7em;
-  /* transform: translateX(14.5em); */
-  /* border-radius: 30px 30px; */
-  background-color: rgba(1, 255, 255, 0.908);
-  color: rgba(12, 7, 50, 0.847);
+  width: 12em;
+  height: 3em;
+  font-size: 1.1em;
+  background-color: #00bebe;
+  border: 1px solid #00ffff;
+  font-family: "Outfit", sans-serif;
+  /* margin-left: 10em; */
+  font-weight: 900;
+  color: #0c113b;
+  cursor: pointer;
+  letter-spacing: 1.5px;
 }
-
+.startButton:hover {
+  box-shadow: 0 0 35px 15px #02a5a5;
+  background-color: #00ffff;
+}
+.finishButton {
+  width: 10em;
+  height: 3em;
+  font-size: 1.1em;
+  background-color: #00bebe;
+  border: 1px solid #00ffff;
+  font-family: "Outfit", sans-serif;
+  /* margin-left: 10em; */
+  margin-top: 2em;
+  font-weight: 900;
+  color: #0c113b;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+.finishButton:hover {
+  box-shadow: 0 0 35px 15px #02a5a5;
+  background-color: #00ffff;
+}
+#arrow {
+  font-size: 1.5em;
+  line-height: 0;
+  font-weight: 900;
+}
 .controls {
   display: flex;
   justify-content: center;
@@ -176,15 +213,15 @@ input {
 }
 
 .base-timer__path-remaining.green {
-  color: #01ffff;
+  color: #c405ae;
 }
 
 .base-timer__path-remaining.orange {
-  color: #01ffff;
+  color: #c405ae;
 }
 
 .base-timer__path-remaining.red {
-  color: #01ffff;
+  color: #c405ae;
 }
 
 .base-timer__label {

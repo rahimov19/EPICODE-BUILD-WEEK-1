@@ -10,7 +10,7 @@
   <body>
    <div id="top"> 
     <img src="/assets/epicode_logo.png">
-    <div id="app"></div>
+    <div id="app" class="hide"></div>
   </div>
   <div id="mainSpace">
     <div class="container">
@@ -22,18 +22,19 @@
           <button class="button">3</button>
           <button class="button">4</button>
         </div>
+       
       </div>
       <div class="controls">
-        <button id="start" class="startButton">Start</button>
-        <button id="next" class="nextButton">Next</button>
+        <button id="start" class="startButton">Start The Quiz</button>
+        <button id="next" class="nextButton hide">Next <span id="arrow"> &#8594</span></button>
+        <button onclick="finish()" id="finish" class="finishButton hide">Finish</button>
       </div>
       <div class="points">
         <label for="urScore">Your Score:</label>
         <input id="scoreboard" type="number" name="urScore" disabled></input>
       </div>
     </div></div>
-    <div id="bottomtext">QUESTION 1<span id="btm">/10</span></div>
-
+    <div id="bottomtext" class="hide">QUESTION <span id="btm2"></span><span id="btm">/10</span></div>
     <script src="./quiz.js"></script>
   </body>
 </html>
