@@ -236,7 +236,7 @@ function finish() {
   applyAnswer();
   let score = scoreBoard.value;
   alert("Congratulations. Your score is " + score);
-  location.replace("/results.html");
+  location.replace("../resultPage/resultPage.html");
 }
 function setStatusClass(element, correct) {
   clearStatusClass(element);
