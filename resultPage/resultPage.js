@@ -13,6 +13,8 @@ window.onload = function () {
   changeNumberOfCorrect();
   changeNumberOfWrong();
   changeResultText();
+  changeProgressBar();
+};
 
 const changeResultText = function () {
   let resultTextH1 = document.querySelector(".progress-bar-h1");
@@ -46,7 +48,7 @@ const changeNumberOfWrong = function () {
   wrongNumberElement.innerText = wrongAnswers;
 };
 
-const changeProgresBar = function () {
+const changeProgressBar = function () {
   let circleElement = document.getElementById("top-circle");
   newRatio = 691 + (691 * percentageOfCorrect) / 100;
   circleElement.style.strokeDashoffset = newRatio;
