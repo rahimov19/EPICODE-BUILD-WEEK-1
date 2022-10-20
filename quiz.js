@@ -31,7 +31,7 @@ const questions = [
     question: "What is the correct HTML for adding a background color?",
     answers: [
       { text: "<body style= yellow>", correct: false },
-      { text: "<body style= background-color:yellow", correct: true },
+      { text: "<body style= background-color:yellow>", correct: true },
       { text: "<body bg = yellow>", correct: false },
       { text: "<background>yellow</background>", correct: false },
     ],
@@ -118,10 +118,11 @@ let shuffledQuestions, currentQuestionIndex;
 startButton.addEventListener("click", startGame);
 
 nextButton.addEventListener("click", () => {
-  setNextQuestion();
   applyAnswer();
+  setNextQuestion();
 });
 function startGame() {
+  scoreBoard.value = 0;
   startButton.classList.add("hide");
   document.getElementById("app").classList.remove("hide");
   nextButton.classList.remove("hide");
@@ -176,6 +177,7 @@ function showQuestion(question) {
       button.dataset.correct = answer.correct;
     }
     button.addEventListener("click", selectedButton);
+    button.addEventListener("click", selectAnswer);
     answerButtonsElement.appendChild(button);
   });
 }
@@ -193,14 +195,15 @@ function selectedButton(e) {
 }
 
 function applyAnswer() {
-  selectedAnswer = document.querySelectorAll(".selected");
-  correctAnswer = document.querySelectorAll(".correct");
-  if (selectAnswer + correctAnswer == 2) {
+  // scoreBoard = document.getElementById("scoreboard");
+  // selectedAnswer = document.querySelectorAll(".selected");s
+  correctAnswer = document.querySelectorAll(".button.selected.correct");
+  orrectAnswer = document.querySelectorAll(".correct");
+  if (correctAnswer.length == 1) {
     scoreBoard.value++;
   }
-
-  return scoreBoard.value;
 }
+
 /*------------------------------*/
 
 function resetState() {
@@ -222,16 +225,18 @@ function selectAnswer(e) {
     // nextButton.classList.remove("hide");
     finishButton.classList.add("hide");
   } else {
+    // finish();
     nextButton.classList.add("hide");
     finishButton.classList.remove("hide");
-    let score = scoreBoard.value;
-    alert("Congratulations. Your score is " + score);
-    scoreBoard.value = 0;
+
     questionNum = 0;
   }
 }
 function finish() {
-  location.replace("/welcome.html");
+  applyAnswer();
+  let score = scoreBoard.value;
+  alert("Congratulations. Your score is " + score);
+  location.replace("/results.html");
 }
 function setStatusClass(element, correct) {
   clearStatusClass(element);
