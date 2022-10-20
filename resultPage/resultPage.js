@@ -1,8 +1,9 @@
 let score = 0;
 let maxScore = 10;
-let currentScore = 8;
+let currentScore = 4;
 let correctAnswers = currentScore;
 let wrongAnswers = maxScore - correctAnswers;
+
 let percentageOfCorrect = (correctAnswers / maxScore) * 100;
 let percentageOfWrong = (wrongAnswers / maxScore) * 100;
 
