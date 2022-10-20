@@ -1,6 +1,6 @@
 let score = 0;
 let maxScore = 10;
-let currentScore = 4;
+let currentScore = 8;
 let correctAnswers = currentScore;
 let wrongAnswers = maxScore - correctAnswers;
 
@@ -12,6 +12,8 @@ window.onload = function () {
   changePercentageOfWrong();
   changeNumberOfCorrect();
   changeNumberOfWrong();
+  changeResultText();
+  changeProgresBar();
 };
 
 const changePercentageOfCorrect = function () {
@@ -34,4 +36,9 @@ const changeNumberOfWrong = function () {
   wrongNumberElement.innerText = wrongAnswers;
 };
 
-console.log();
+const changeProgresBar = function () {
+  let circleElement = document.getElementById("top-circle");
+  newRatio = 691 + (691 * percentageOfCorrect) / 100;
+  circleElement.style.strokeDashoffset = newRatio;
+};
+changeProgresBar();
