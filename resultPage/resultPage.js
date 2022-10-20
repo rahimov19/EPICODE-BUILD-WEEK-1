@@ -6,8 +6,6 @@ let wrongAnswers = maxScore - correctAnswers;
 let percentageOfCorrect = (correctAnswers / maxScore) * 100;
 let percentageOfWrong = (wrongAnswers / maxScore) * 100;
 
-console.log(percentageOfCorrect);
-
 window.onload = function () {
   changePercentageOfCorrect();
   changePercentageOfWrong();
