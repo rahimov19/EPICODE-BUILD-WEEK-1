@@ -60,6 +60,7 @@ svg {
   font-size: 1.4em;
   float: left;
   top: 1.2em;
+  padding-top: 1em;
 }
 
 /* #logo {
@@ -143,6 +144,7 @@ button {
   height: 60px;
   margin-inline: auto;
   text-align: center;
+  padding-top: 1em;
   /* height: 100vh; */
 }
 button:hover {

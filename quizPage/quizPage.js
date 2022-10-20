@@ -234,9 +234,10 @@ function selectAnswer(e) {
 }
 function finish() {
   applyAnswer();
+  localStorage.setItem("scoreBoard", scoreBoard.value);
   let score = scoreBoard.value;
-  alert("Congratulations. Your score is " + score);
-  location.replace("/results.html");
+  // alert("Congratulations. Your score is " + score);
+  location.replace("/resultPage/resultPage.html");
 }
 function setStatusClass(element, correct) {
   clearStatusClass(element);

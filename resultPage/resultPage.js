@@ -1,6 +1,6 @@
 let score = 0;
 let maxScore = 10;
-let currentScore = 3;
+let currentScore = localStorage.getItem("scoreBoard");
 let correctAnswers = currentScore;
 let wrongAnswers = maxScore - correctAnswers;
 
