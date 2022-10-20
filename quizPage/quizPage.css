@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;900&family=Outfit:wght@400;900&display=swap");
+html {
+  width: 100%;
+}
+body {
+  --hue: var(--hue-neutral);
+  background-image: url(../assets/bg.jpg);
+  /* width: 85%; */
+  color: white;
+  font-family: "Inter", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 200;
+  /* width: 100vw; */
+  height: 92vh;
+  color: white;
+  font-size: 1.25em;
+  /* margin-inline: 4em;
+  margin-top: 3em; */
+  margin-block: 1.6em;
+  margin-inline: 8em;
+}
+#top {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 5em;
+}
+#mainSpace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  width: 95%;
+}
+/* div { */
+/* border: 1px solid black; */
+/* } */
+button {
+  margin-top: 10px;
+}
+img {
+  height: 32px;
+}
+
+.container {
+  width: 80%;
+  max-width: 80%;
+  /* background-color: white; */
+  border-radius: 5px;
+  padding: 10px;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.points {
+  display: none;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 30px;
+  margin: 20px 0;
+  transform: translateX(4%);
+}
+.button {
+  color: blueviolet;
+  box-shadow: 1px -4px 0px -3px white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px 30px;
+  padding: 5px 10px;
+  height: 3.5em;
+  color: white;
+  font-size: 1em;
+  outline: none;
+  width: 80%;
+}
+
+.button:hover {
+  border-color: black;
+}
+
+.button.selected {
+  --hue: var(--hue-correct);
+  color: whitesmoke;
+  background-color: #c80090;
+}
+.button.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.nextButton {
+  width: 8em;
+  height: 3em;
+  font-size: 1.1em;
+  background-color: #00bebe;
+  border: 1px solid #00ffff;
+  font-family: "Outfit", sans-serif;
+  margin-left: 30em;
+  font-weight: 900;
+  color: #0c113b;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  margin-top: 1em;
+}
+.nextButton:hover {
+  box-shadow: 0 0 35px 15px #02a5a5;
+  background-color: #00ffff;
+}
+.startButton {
+  width: 12em;
+  height: 3em;
+  font-size: 1.1em;
+  background-color: #00bebe;
+  border: 1px solid #00ffff;
+  font-family: "Outfit", sans-serif;
+  /* margin-left: 10em; */
+  font-weight: 900;
+  color: #0c113b;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+.startButton:hover {
+  box-shadow: 0 0 35px 15px #02a5a5;
+  background-color: #00ffff;
+}
+.finishButton {
+  width: 10em;
+  height: 3em;
+  font-size: 1.1em;
+  background-color: #00bebe;
+  border: 1px solid #00ffff;
+  font-family: "Outfit", sans-serif;
+  /* margin-left: 10em; */
+  margin-top: 2em;
+  font-weight: 900;
+  color: #0c113b;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+.finishButton:hover {
+  box-shadow: 0 0 35px 15px #02a5a5;
+  background-color: #00ffff;
+}
+#arrow {
+  font-size: 1.5em;
+  line-height: 0;
+  font-weight: 900;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+input {
+  margin-top: 15px;
+}
+#question {
+  color: white;
+  margin-bottom: 2em;
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 400;
+}
+#bottomtext {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  width: 95%;
+}
+#btm {
+  color: #c405ae;
+}
+#question-container {
+  width: 80%;
+}
+
+.base-timer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: #c405ae;
+}
+
+.base-timer__path-remaining.orange {
+  color: #c405ae;
+}
+
+.base-timer__path-remaining.red {
+  color: #c405ae;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+#timertext {
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  bottom: 3.6em;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+#remaining {
+  bottom: 0px;
+  position: absolute;
+  right: 40px;
+}
+#seconds {
+  bottom: 60px;
+  position: absolute;
+  right: 47px;
+}
