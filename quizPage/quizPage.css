@@ -4,7 +4,7 @@ html {
 }
 body {
   --hue: var(--hue-neutral);
-  background-image: url(/assets/bg.jpg);
+  background-image: url(../assets/bg.jpg);
   /* width: 85%; */
   color: white;
   font-family: "Inter", sans-serif;
