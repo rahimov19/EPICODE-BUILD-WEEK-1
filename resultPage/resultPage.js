@@ -41,4 +41,3 @@ const changeProgresBar = function () {
   newRatio = 691 + (691 * percentageOfCorrect) / 100;
   circleElement.style.strokeDashoffset = newRatio;
 };
-changeProgresBar();
