@@ -33,3 +33,5 @@ const changeNumberOfWrong = function () {
   let wrongNumberElement = document.getElementById("wrongNumber");
   wrongNumberElement.innerText = wrongAnswers;
 };
+
+console.log();
