@@ -119,6 +119,7 @@ startButton.addEventListener("click", startGame);
 
 nextButton.addEventListener("click", () => {
   setNextQuestion();
+  applyAnswer();
 });
 function startGame() {
   startButton.classList.add("hide");
@@ -174,12 +175,27 @@ function showQuestion(question) {
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
-    button.addEventListener("click", selectAnswer);
+    button.addEventListener("click", selectedButton);
     answerButtonsElement.appendChild(button);
   });
 }
+function selectedButton(e) {
+  let selectedButton = e.target;
+  const selected = selectedButton.classList.add("selected");
+  setStatusClass(document.body, selected);
+  const previouslySelected = document.querySelectorAll(".selected");
+  if (previouslySelected.length > 0) {
+    for (i = 0; i < previouslySelected.length; i++) {
+      previouslySelected[i].classList.remove("selected");
+    }
+  }
+  selectedButton.classList.add("selected");
+}
+
 function applyAnswer() {
-  if ((selectedButton = correct)) {
+  selectedAnswer = document.querySelectorAll(".selected");
+  correctAnswer = document.querySelectorAll(".correct");
+  if (selectAnswer + correctAnswer == 2) {
     scoreBoard.value++;
   }
 

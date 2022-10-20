@@ -82,7 +82,7 @@ img {
   border-color: black;
 }
 
-.button.correct {
+.button.selected {
   --hue: var(--hue-correct);
   color: whitesmoke;
   background-color: #c80090;
