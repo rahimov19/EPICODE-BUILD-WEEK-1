@@ -27,8 +27,8 @@ body {
   font-weight: 200;
   color: white;
   /* font-size: 1.25em; */
-  margin-block: 1.6em;
-  margin-inline: 8em;
+  margin-block: 2em;
+  margin-inline: 10em;
   font-family: "Inter", sans-serif;
 }
 
@@ -132,6 +132,7 @@ p {
   position: absolute;
   top: 50%;
   bottom: 0;
+  z-index: -1;
 }
 
 button {

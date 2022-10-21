@@ -272,7 +272,7 @@ const COLOR_CODES = {
   },
 };
 
-let TIME_LIMIT = 60;
+let TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -340,7 +340,7 @@ function startTimer() {
 
 function restartTimer() {
   clearInterval(timerInterval);
-  TIME_LIMIT = 60;
+  TIME_LIMIT = 30;
   timePassed = null;
   timeLeft = TIME_LIMIT;
   timerInterval = null;

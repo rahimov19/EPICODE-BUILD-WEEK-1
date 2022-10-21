@@ -126,6 +126,7 @@ body {
   /* percent: */
   /*691 for full circle*/
   stroke-dasharray: 691;
+
   /* for animate the circle we use dashoffset */
   stroke-dashoffset: 0;
   animation: anim 3s ease forwards;

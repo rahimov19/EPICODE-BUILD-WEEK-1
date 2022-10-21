@@ -110,6 +110,7 @@ img {
   cursor: pointer;
   letter-spacing: 1.5px;
   margin-top: 1em;
+  /* position: fixed; */
 }
 .nextButton:hover {
   box-shadow: 0 0 35px 15px #02a5a5;
