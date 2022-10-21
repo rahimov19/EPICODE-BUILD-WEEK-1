@@ -45,6 +45,7 @@ body {
   flex-direction: column;
   margin-inline: auto;
   padding: 3rem 12rem;
+  margin-top: 5em;
 }
 
 .rating {
