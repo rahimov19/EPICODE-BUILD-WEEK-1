@@ -76,10 +76,16 @@ img {
   font-size: 1em;
   outline: none;
   width: 80%;
+  cursor: pointer;
 }
 
 .button:hover {
   border-color: black;
+  color: cyan;
+  /*box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);*/
+  box-shadow: 0 0 20px 5px cyan;
+  opacity: 1;
 }
 
 .button.selected {
