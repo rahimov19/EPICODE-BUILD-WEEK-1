@@ -23,18 +23,28 @@
     <input class="checkbox" id="check" type="checkbox" name="promise" onchange="enableSubmit()">
 <label for="promise"><span></span> I promise to answer myself without help from anyone</label></input>
     <a href="../quizPage/quizPage.html">
-        <button id="proceed" disabled="true">PROCEED</button></a>
+        <button id="proceed">PROCEED</button></a>
 </div>
 
 
 <script>
+let link = document.querySelector("a")
+let btn = document.getElementById('proceed');
+
+let disableLink = function(){
+    btn.addEventListener("click", promise)
+    link.removeAttribute("href")
+}
+let enableLink = function(){
+    btn.removeEventListener("click", promise)
+    link.setAttribute("href", "../quizPage/quizPage.html")
+}
 function enableSubmit()
 {let check = document.getElementById('check'); 
-let btn = document.getElementById('proceed');
-if (check.checked === true) {btn.disabled = false} else {btn.disabled = true}
-// check.addEventListener("change",(event) => {btn.disabled = !event.target.checked;});
-
+// if (check.checked === true) {btn.disabled = false} else {btn.disabled = true; }
+if (check.checked === true) {enableLink()} else {disableLink()}
 }
+function promise(){alert("Please promise :)")}
 window.onload(enableSubmit())
 </script>
 </body>
