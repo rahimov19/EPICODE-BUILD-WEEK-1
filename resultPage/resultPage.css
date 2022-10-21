@@ -108,7 +108,8 @@ body {
 .bottom-svg {
   fill: none;
   stroke: #c2128d;
-  stroke-width: 30px;
+  stroke-width: 35px;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
 }
 
 .top-svg circle {
@@ -120,12 +121,21 @@ body {
   stroke-dasharray: 691;
   /* for animate the circle we use dashoffset */
   stroke-dashoffset: 0;
+  stroke-width: 35;
+  animation: anim 3s ease forwards;
 }
 
 .top-svg {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* circle animation */
+@keyframes anim {
+  0% {
+    stroke-dashoffset: 691;
+  }
 }
 
 .correct-questions {
